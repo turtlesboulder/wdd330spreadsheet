@@ -1,0 +1,99 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    height: 100%;
+    overflow: auto; /* Change this to auto to show scrollbar when needed */
+}
+
+.container {
+    /* Remove the height and overflow properties from the container */
+    padding: 10px;
+    overflow: scroll;
+}
+
+header {
+    background-color: #305080;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+}
+
+td {
+    min-width: 7em;
+    max-width: 7em;
+    height: 2em; /* Updated cell height */
+    border: 1px solid grey;
+    padding: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+th{
+    background-color: #d0d0d0;
+    border: 1px solid grey;
+    min-width: 2em;
+}
+tr:first-child th{
+    background-color: #d0d0d0;
+    height: 2em;
+}
+
+table {
+    margin: 0px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 27px; /* Add this line to add space for the sticky header */
+}
+
+
+.selected {
+    background-color: #d0d0ff;
+}
+
+td:hover {
+    background-color: #f8f8f8;
+}
+
+.selected:hover {
+    background-color: #c8c8f8;
+}
+
+
+#title {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    background-color: transparent;
+    min-width: 7em; /* Set a minimum width for the title */
+    flex-shrink: 0;
+    color:white;
+}
+.header-controls {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+.header-controls input{
+    width: calc(100vw - 7em - 250px);
+}
+main {
+    position: relative;
+    padding-top: 40px; /* Adjust this value to add space for the sticky header */
+    height: calc(100% - 68px); /* Adjust this value based on the height of the header */
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100%;
+}
+#confirm{
+    font-size: 1em;
+}
